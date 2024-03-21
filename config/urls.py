@@ -21,10 +21,10 @@ from django.conf import settings
 from django.views.static import serve
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('newsApp.urls'))
+    path('', include('news.urls')),
+    path('crypto/', include('crypto.urls')),
 ]
 
 
