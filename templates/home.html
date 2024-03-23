@@ -6,6 +6,11 @@
 	<title>Yangiliklar</title>
 </head>
 <body>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
 	<h1>KUN YANGILIKILARI</h1>
 	<ul>
 		{% for post in object_list %}
@@ -16,5 +21,8 @@
 		<h3>@{{ post.user.username }}</h3>
 		{% endfor %}
 	</ul>
+
+{% endblock content %}
+
 </body>
 </html>

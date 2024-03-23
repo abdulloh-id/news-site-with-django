@@ -6,6 +6,25 @@
 	<title>Kripto Yangiliklar</title>
 </head>
 <body>
-	<h1>Bu yerda kripto yangiliklar bo'ladi</h1>
+	<h1>ENG SOʻNGGI KRIPTO YANGLIKILAR BILAN TANISHING:</h1>
+<!-- 	<ul>
+		{% for article in top_headlines.articles %}
+			<li>
+				<h2>{{ article.title }}</h2>
+				<p>{{ article.description }}</p>
+				<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
+			</li>
+		{% endfor %}
+	</ul>
+ -->
+	<ul>
+		{% for article in all_articles.articles %}
+			<li>
+				<h2>{{ article.title }}</h2>
+				<p>{{ article.description }}</p>
+				<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
+			</li>
+		{% endfor %}
+	</ul>
 </body>
 </html>

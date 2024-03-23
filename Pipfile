@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 gunicorn = "*"
 newsapi-python = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
