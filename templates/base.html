@@ -6,13 +6,13 @@
 	<title>News Site Project</title>
 </head>
 <body>
-<header>
-	<a href="{% url 'home' %}">LOGO<a/>
-	<a href="{% url 'crypto' %}">Kripto<a/>
-</header>
+
+{% include 'navbar.html' %}
 
 {% block content %}
+
 {% endblock content %}
+
 
 </body>
 </html>

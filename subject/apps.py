@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-class CryptoConfig(AppConfig):
+class SubjectConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'crypto'
+    name = 'subject'

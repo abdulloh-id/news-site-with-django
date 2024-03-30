@@ -35,3 +35,34 @@ class CryptoPageView(TemplateView):
 		context['all_articles'] = all_articles
 
 		return context
+
+# Create your views here.
+class GazaPageView(TemplateView):
+	template_name = 'gaza.html'
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+
+		today = datetime.datetime.now().date()
+		yesterday = today - datetime.timedelta(days=1)
+
+		newsapi = NewsApiClient(api_key=API_KEY)
+
+		# top_headlines = newsapi.get_top_headlines(
+		# 										q='bitcoin',
+		# 										language='en')
+		
+		all_articles = newsapi.get_everything(
+											q='gaza',
+											from_param=yesterday,
+											to=today,
+											language='en',
+											sort_by='relevancy')
+
+		#context['top_headlines'] = top_headlines
+		context['all_articles'] = all_articles
+
+		return context
+
+
+

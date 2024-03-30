@@ -3,25 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kripto Yangiliklar</title>
+	<title>Gʻazo Yangiliklari</title>
 </head>
 <body>
-{% extends 'base.html' %}
+
+{% extends 'base.html' %}	
 
 {% block content %}
 
-	<h1>ENG SOʻNGGI KRIPTO YANGILIKILAR BILAN TANISHING:</h1>
-<!-- 	<ul>
-		{% for article in top_headlines.articles %}
-			<li>
-				<h2>{{ article.title }}</h2>
-				<p>{{ article.description }}</p>
-				<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
-			</li>
-		{% endfor %}
-	</ul>
- -->
-	<ul>
+	<h1>GʻAZO SEKTORI YANGILIKLARI</h1>
+		<ul>
 		{% for article in all_articles.articles %}
 			
 			{% if article.title != '[Removed]' %}
@@ -35,7 +26,6 @@
 				<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
 			</li>
 			{% endif %}
-
 		{% endfor %}
 	</ul>
 
