@@ -11,8 +11,28 @@
 
 {% block content %}
 
-	<h1>KUN YANGILIKILARI</h1>
-	<ul>
+	<h1>KUN YANGILIKILARI:</h1>
+		<ul>
+			{% for article in top_headlines.articles %}
+				
+				{% if article.title != '[Removed]' %}
+				
+				<li>
+					<h2>{{ article.title }}</h2>
+
+					{% if article.description %}
+					<p>{{ article.description }}</p>
+					{% endif %}
+				
+					<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
+				</li>
+
+				{% endif %}
+
+			{% endfor %}
+		</ul>
+
+	<!-- <ul>
 		{% for post in object_list %}
 			<li>
 				<h2>{{ post.title }}</h2></hr>
@@ -20,7 +40,7 @@
 			</li>
 		<h3>@{{ post.user.username }}</h3>
 		{% endfor %}
-	</ul>
+	</ul> -->
 
 {% endblock content %}
 
