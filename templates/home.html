@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yangiliklar</title>
-</head>
-<body>
-
 {% extends 'base.html' %}
 
 {% block content %}
 
 	<h1>KUN YANGILIKILARI:</h1>
+
 		<ul>
 			{% for article in top_headlines.articles %}
-				
+
 				{% if article.title != '[Removed]' %}
-				
+
 				<li>
 					<h2>{{ article.title }}</h2>
-
+					
 					{% if article.description %}
-					<p>{{ article.description }}</p>
+						<p>{{ article.description }}</p>
 					{% endif %}
-				
+
+					<img src="{{ article.urlToImage }}"><br>
+
 					<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
 				</li>
 
@@ -43,6 +37,3 @@
 	</ul> -->
 
 {% endblock content %}
-
-</body>
-</html>

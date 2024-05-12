@@ -12,7 +12,7 @@ import datetime
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
-# Create your views here.
+#Create your views here.
 # class HomePageView(ListView):
 # 	model = Post
 # 	template_name = 'home.html'
@@ -28,5 +28,6 @@ class HomePageView(TemplateView):
 		top_headlines = newsapi.get_top_headlines(sources='bbc-news', language='en')
 
 		context['top_headlines'] = top_headlines
+		print(context)
 
 		return context
