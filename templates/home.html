@@ -10,15 +10,13 @@
 				{% if article.title != '[Removed]' %}
 
 				<li>
-					<h2>{{ article.title }}</h2>
+					<h2><a href="{{ article.url }}" target="_blank">{{ article.title }}</a></h2>
 					
 					{% if article.description %}
 						<p>{{ article.description }}</p>
 					{% endif %}
 
 					<img src="{{ article.urlToImage }}"><br>
-
-					<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
 				</li>
 
 				{% endif %}

@@ -23,17 +23,19 @@
  -->
 	<ul>
 		{% for article in all_articles.articles %}
-			
-			{% if article.title != '[Removed]' %}
-			<li>
-				<h2>{{ article.title }}</h2>
 
+			{% if article.title != '[Removed]' %}
+
+			<li>
+				<h2><a href="{{ article.url }}" target="_blank">{{ article.title }}</a></h2>
+				
 				{% if article.description %}
-				<p>{{ article.description }}</p>
+					<p>{{ article.description }}</p>
 				{% endif %}
-			
-				<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
+
+				<img src="{{ article.urlToImage }}"><br>
 			</li>
+
 			{% endif %}
 
 		{% endfor %}

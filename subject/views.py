@@ -61,6 +61,7 @@ class GazaPageView(TemplateView):
 
 		#context['top_headlines'] = top_headlines
 		context['all_articles'] = all_articles
+		print(context)
 
 		return context
 
