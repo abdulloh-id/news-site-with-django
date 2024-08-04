@@ -7,6 +7,7 @@ import datetime
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
+print(API_KEY)
 
 # Create your views here.
 class CryptoPageView(TemplateView):

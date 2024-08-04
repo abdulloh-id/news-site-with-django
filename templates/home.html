@@ -10,30 +10,23 @@
 				{% if article.title != '[Removed]' %}
 
 				<li>
-					<h2>{{ article.title }}</h2>
-					
-					{% if article.description %}
-						<p>{{ article.description }}</p>
-					{% endif %}
-
-					<img src="{{ article.urlToImage }}"><br>
-
-					<a href="{{ article.url }}" target="_blank">Koʻproq oʻqing</a>
+					<div class="card-container">
+					<div class="card" style="width: 18rem;">
+					  <img src="{{ article.urlToImage }}" class="card-img-top" alt="...">
+					  <div class="card-body">
+					    <h5 class="card-title">{{ article.title }}</h5>
+					    <p class="card-text">{% if article.description %}
+							<p>{{ article.description }}</p>
+						{% endif %}</p>
+					    <a href=""{{ article.url }} target="_blank" class="btn btn-primary">Koʻproq oʻqing</a>
+					  </div>
+					</div>
+				</div>
 				</li>
 
 				{% endif %}
 
 			{% endfor %}
 		</ul>
-
-	<!-- <ul>
-		{% for post in object_list %}
-			<li>
-				<h2>{{ post.title }}</h2></hr>
-					{{ post.text }}
-			</li>
-		<h3>@{{ post.user.username }}</h3>
-		{% endfor %}
-	</ul> -->
 
 {% endblock content %}
